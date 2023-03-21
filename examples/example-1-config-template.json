@@ -1,0 +1,89 @@
+[
+  {
+    "field": "id",
+    "name": "ID",
+    "transformations": [
+      {
+        "type": "generate-uuid@v1",
+        "version": "v4"
+      }
+    ]
+  },
+  {
+    "field": "firstName",
+    "name": "First name"
+  },
+  {
+    "field": "lastName",
+    "name": "Last name"
+  },
+  {
+    "field": "price",
+    "name": "Price",
+    "transformations": [
+      {
+        "type": "overwrite@v1",
+        "value": "$9.99"
+      }
+    ]
+  },
+  {
+    "field": "city",
+    "name": "City",
+    "transformations": [
+      {
+        "type": "find-replace@v1",
+        "find": "London|Greater London|City of London|London metropolitan area|the City|the Square Mile|Inner London|Outer London",
+        "replace": "London"
+      }
+    ]
+  },
+  {
+    "field": "performer",
+    "name": "Perfomer",
+    "transformations": [
+      {
+        "type": "string@v1",
+        "prepend": "The great ",
+        "append": "!",
+        "changeCase": "upperCase"
+      }
+    ]
+  },
+  {
+    "field": "date",
+    "name": "Event date",
+    "transformations": [
+      {
+        "type": "date@v1",
+        "inputFormat": "dd-MM-yyyy",
+        "outputFormat": "yyyy-MM-dd",
+        "zone": "UTC"
+      }
+    ]
+  },
+  {
+    "field": "phone",
+    "name": "Contact phone number",
+    "transformations": [
+      {
+        "type": "phone-number@v1",
+        "outputFormat": "international-no-spaces",
+        "countryCode": "GB"
+      }
+    ]
+  },
+  {
+    "field": "paid",
+    "name": "Paid",
+    "transformations": [
+      {
+        "type": "substitution@v1",
+        "mapping": {
+          "true": "Yes",
+          "false": "No"
+        }
+      }
+    ]
+  }
+]
