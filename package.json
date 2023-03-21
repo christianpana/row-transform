@@ -1,7 +1,10 @@
 {
   "name": "row-transform",
   "version": "1.0.0",
-  "description": "",
+  "description": "Versatile package designed to perform a series of transformations on a dataset using a predefined template",
+  "files": [
+    "dist/"
+  ],
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,8 +20,8 @@
     "type": "git",
     "url": "git+https://github.com/christianpana/row-transform.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "christianpana.com",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/christianpana/row-transform/issues"
   },

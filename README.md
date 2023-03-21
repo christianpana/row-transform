@@ -31,7 +31,7 @@ npm install row-transform
 ```
 
 ```js
-import RowTransform from "./RowTransform.ts";
+import RowTransform from "row-transform";
 import template from './template.json';
 import data from './data.json';
 
