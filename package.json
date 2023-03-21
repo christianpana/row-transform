@@ -1,6 +1,6 @@
 {
   "name": "row-transform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Versatile package designed to perform a series of transformations on a dataset using a predefined template",
   "files": [
     "dist/"
