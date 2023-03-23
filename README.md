@@ -4,6 +4,9 @@ RowTransform is a versatile JavaScript package designed to perform a series of t
 on a dataset using a predefined template. This package enables developers to modify data based on 
 specific keys or columns while ensuring that the output only contains the keys specified within the template.
 
+## Demo
+https://codesandbox.io/p/sandbox/row-transform-example-xy5qkr?file=%2Fsrc%2Findex.js
+
 ## Key Features
 - RowTransform Templates: Transform datasets using predefined templates.
 - Key or Column-based Modification: Focus data modification on specific keys or columns.
@@ -16,6 +19,24 @@ specific keys or columns while ensuring that the output only contains the keys s
 - Phone Number Transform: Modify phone numbers using libphonenumber-js library.
 - Generate UUID Transform: Create UUIDs with the uuid library.
 
+## Quickstart
+```cli
+npm install row-transform
+```
+
+```js
+import RowTransform from "row-transform";
+
+import template from "./template.json" assert { type: "json" };
+import data from "./data.json" assert { type: "json" };
+
+const rt = new RowTransform(template);
+const transformedData = rt.transform(data);
+
+console.log("transformedData", transformedData);
+
+```
+
 ## Behavior
 By default, RowTransform will discard any keys not present in the provided template. This behavior 
 ensures that the resulting data only includes the desired keys/columns after the transformation process.
@@ -24,22 +45,6 @@ Please note that future updates may introduce options for passing additional arg
 RowTransform function, potentially altering the default behavior.
 
 You can apply several transformations consecutively by including them in the transformations array.
-
-## Quickstart
-```cli
-npm install row-transform
-```
-
-```js
-import RowTransform from "row-transform";
-import template from './template.json';
-import data from './data.json';
-
-const rt = new RowTransform(template);
-const parsedData = rt.transform(data);
-
-console.log('parsedData', parsedData)
-```
 
 ## Transformations
 
